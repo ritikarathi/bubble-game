@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100vh;
+    
+    overflow: hidden;
+}
+
+.circle{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: blue;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    opacity: 1;
+    overflow: hidden;
+    animation: grow 3s forwards;
+    
+}
+@keyframes grow {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        font-size: 10px;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+        font-size: 40px;
+    }
+}
+/*opacity means visibility if it is 1 the visiblity is full otherwise transparent */
+/*transform scale (1) means at 0% means initially it is of same size, and at 100%  its scale is 3 times bigger
+animation iteration is set to infinite as if not written this will run only once 
